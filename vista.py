@@ -44,6 +44,21 @@ class Vista:
 
         # mostrar el gráfico
         plt.show()
+
+
+    def mostrar_grafico_presion (self, presiones):
+        df_presion = pd.DataFrame({'Presión': presiones})
+
+        # crear un gráfico de línea
+        df_presion.plot(kind='line')
+
+        # personalizar el gráfico con títulos y etiquetas de los ejes
+        plt.title('Presión')
+        plt.xlabel('Tiempo (minutos)')
+        plt.ylabel('Presión (mbar)')
+
+        # mostrar el gráfico
+        plt.show()
         
    
             

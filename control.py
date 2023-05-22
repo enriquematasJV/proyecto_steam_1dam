@@ -25,7 +25,9 @@ class Control:
             elif opcion == "4":
                self.vista.mostrar_grafico_temperatura(self.modelo.get_temperaturas())
                opcion="0" 
-           
+            elif opcion == "5":
+               self.vista.mostrar_grafico_presion(self.modelo.get_presiones())
+               opcion="0"
            
             elif opcion == "s":
                print("¡Hasta luego!")
