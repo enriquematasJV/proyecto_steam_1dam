@@ -24,8 +24,10 @@ class Vista:
     def mostrar_temperatura(self,t):
         self.sense.show_message("{}C".format(t))
         print(t)
-          
-   
+
+    def mostrar_presion(self,p):
+        self.sense.show_message("{}C".format(p))
+        print(p)
     
     def mostrar_valor_medio(self, m, texto):
        pass

@@ -6,6 +6,7 @@ class Mediciones:
         self.sense=SenseHat()
     
         self.temperaturas=[]
+        self.presiones=[]
        
    
    
@@ -19,8 +20,13 @@ class Mediciones:
     def get_temperaturas(self):
          return self.temperaturas
   
-        
-    
+    def get_presion(self):
+        p=self.sense.get_pressure()
+        self.presiones.append(p)
+        return p
+
+    def get_presiones(self):
+        return self.presiones
     def get_valor_medio(self,lista):
        pass
     
