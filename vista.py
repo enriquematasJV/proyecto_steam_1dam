@@ -26,7 +26,7 @@ class Vista:
         print(t)
 
     def mostrar_presion(self,p):
-        self.sense.show_message("{}C".format(p))
+        self.sense.show_message("{}Mbar".format(p))
         print(p)
     
     def mostrar_valor_medio(self, m, texto):

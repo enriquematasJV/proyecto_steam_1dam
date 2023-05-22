@@ -21,12 +21,13 @@ class Mediciones:
          return self.temperaturas
   
     def get_presion(self):
-        p=self.sense.get_pressure()
+        p = round(self.sense.get_pressure(),2)
         self.presiones.append(p)
         return p
 
     def get_presiones(self):
         return self.presiones
+    
     def get_valor_medio(self,lista):
        pass
     
