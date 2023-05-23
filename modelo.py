@@ -6,8 +6,13 @@ class Mediciones:
         self.sense=SenseHat()
     
         self.temperaturas=[]
+        
+        self.humedades=[]
        
-   
+    def get_humedad(self):
+       h=round(self.sense.humidity,2)
+       self.humedades.append(h)
+       return h
    
    
     def get_temperatura(self):
