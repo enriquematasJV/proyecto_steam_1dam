@@ -28,7 +28,13 @@ class Vista:
    
     
     def mostrar_valor_medio(self, m, texto):
-       pass
+        if texto=="temperatura" :
+            self.sense.show_message("{}C".format(m))
+        elif texto=="presion" :
+            self.sense.show_message("{}bar".format(m))
+        elif texto=="humedad" :
+            self.sense.show_message("{}g/m3".format(m))
+        print(m)
     
     
     def mostrar_grafico_temperatura (self, temperaturas):
