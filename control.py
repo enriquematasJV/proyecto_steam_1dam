@@ -28,8 +28,11 @@ class Control:
                 opcion="0"
             elif opcion == "4":
                self.vista.mostrar_grafico_temperatura(self.modelo.get_temperaturas())
+               opcion="0"
+               
+            elif opcion == "6":
+               self.vista.mostrar_grafico_humedad(self.modelo.get_humedad())
                opcion="0" 
-           
            
             elif opcion == "s":
                print("¡Hasta luego!")

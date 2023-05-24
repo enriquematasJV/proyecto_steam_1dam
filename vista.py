@@ -47,5 +47,19 @@ class Vista:
         # mostrar el gráfico
         plt.show()
         
+    def mostrar_grafico_humedad (self, humedades):
+        df_humedad = pd.DataFrame({'Humedad': humedades})
+
+        # crear un gráfico de línea
+        df_humedad.plot(kind='line')
+
+        # personalizar el gráfico con títulos y etiquetas de los ejes
+        plt.title('Humedad')
+        plt.xlabel('Tiempo (minutos)')
+        plt.ylabel('Humedad (%)')
+
+        # mostrar el gráfico
+        plt.show()
+        
    
             
