@@ -21,6 +21,7 @@ class Mediciones:
     def get_temperaturas(self):
          return self.temperaturas
     
+    
     def get_presion(self):
          return self.presion
 
