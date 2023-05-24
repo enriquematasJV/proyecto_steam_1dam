@@ -6,6 +6,10 @@ class Mediciones:
         self.sense=SenseHat()
     
         self.temperaturas=[]
+        
+        self.presiones=[]
+        
+        self.humedades=[]
        
    
    
@@ -18,17 +22,26 @@ class Mediciones:
      
     def get_temperaturas(self):
          return self.temperaturas
+        
+    def get_humedades(self):
+         return self.humedades
+        
+    def get_presiones(self):
+         return self.presiones
   
         
     
     def get_valor_medio(self,lista):
-       pass
+        pass
     
     def get_valor_max(self,lista):
-       pass
+        valor_max = max(lista)
+        return valor_max
+            
     
     def get_valor_min(self,lista):
-       pass    
+        valor_min = min(lista)
+        return valor_min   
                                             
         
 
