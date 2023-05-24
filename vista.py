@@ -24,6 +24,7 @@ class Vista:
         print("13. Valor minimo temperatura")
         print("14. Valor minimo presion")
         print("15. Valor minimo humedad")
+        print("16. Leer fichero")
         print("s. Salir")
         return input("Ingrese la opción deseada: ")
     
@@ -53,6 +54,10 @@ class Vista:
     
     def mostrar_valor_medio(self, m, texto):
        pass
+    
+    def leer_fichero(f):
+        print(f.readline())
+        
     
     
     def mostrar_grafico_temperatura (self, temperaturas):

@@ -32,24 +32,26 @@ class Control:
             elif opcion == "11":
                m = self.modelo.get_valor_max(self.modelo.get_presiones())
                self.vista.mostrar_valor_max(m,"presion")
-               opcion="0"
+                opcion="0"
             elif opcion == "12":
                m = self.modelo.get_valor_max(self.modelo.get_humedades())
                self.vista.mostrar_valor_max(m,"humedad")
                opcion="0"
             
             elif opcion == "13":
-               m = self.modelo.get_valor_min(self.modelo.get_temperaturas())
-               self.vista.mostrar_valor_min(m,"temperatura")
-               opcion="0"
+                m = self.modelo.get_valor_min(self.modelo.get_temperaturas())
+                self.vista.mostrar_valor_min(m,"temperatura")
+                opcion="0"
             elif opcion == "14":
-               m = self.modelo.get_valor_min(self.modelo.get_presiones())
-               self.vista.mostrar_valor_min(m,"presion")
-               opcion="0"
+                m = self.modelo.get_valor_min(self.modelo.get_presiones())
+                self.vista.mostrar_valor_min(m,"presion")
+                opcion="0"
             elif opcion == "15":
-               m = self.modelo.get_valor_min(self.modelo.get_humedades())
-               self.vista.mostrar_valor_min(m,"humedad")
+                m = self.modelo.get_valor_min(self.modelo.get_humedades())
+                self.vista.mostrar_valor_min(m,"humedad")
                opcion="0"
+            elif opcion == "16"
+                
            
             elif opcion == "s":
                print("¡Hasta luego!")

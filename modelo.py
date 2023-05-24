@@ -1,6 +1,7 @@
 from sense_emu import SenseHat
 
 class Mediciones:
+    
 
     def __init__(self):
         self.sense=SenseHat()
@@ -44,7 +45,9 @@ class Mediciones:
         return valor_min   
                                             
         
-
+    def leer_fichero("./Datos.txt"):
+        f = open(fichero)
+        return f
 
                 
         
