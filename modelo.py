@@ -10,7 +10,7 @@ class Mediciones:
         self.presiones=[]
        
         self.humedades=[]
-   
+
    
     def get_temperatura(self):
         t=round(self.sense.temp, 2)
@@ -20,12 +20,18 @@ class Mediciones:
      
     def get_temperaturas(self):
          return self.temperaturas
-    
+
     def get_presiones(self):
          return self.presiones
 
     def get_humedades(self):
          return self.humedades
+    
+    def get_presion(self):
+         return self.presion
+
+    def get_humedad(self):
+         return self.humedad
     
     def get_valor_medio(self,lista):
         suma=0
