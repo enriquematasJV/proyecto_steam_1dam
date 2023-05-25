@@ -7,10 +7,10 @@ class Mediciones:
     
         self.temperaturas=[]
        
-        self.presion=[]
+        self.presiones=[]
        
-        self.humedad=[]
-   
+        self.humedades=[]
+
    
     def get_temperatura(self):
         t=round(self.sense.temp, 2)
@@ -20,7 +20,12 @@ class Mediciones:
      
     def get_temperaturas(self):
          return self.temperaturas
-    
+
+    def get_presiones(self):
+         return self.presiones
+
+    def get_humedades(self):
+         return self.humedades
     
     def get_presion(self):
          return self.presion
@@ -43,7 +48,21 @@ class Mediciones:
        pass
     
     def get_valor_min(self,lista):
-       pass    
+       pass
+
+    def escribir(self,listHmd,listPr,listTemp):
+        file= open('Datos.txt','a')
+        file.write("Humedad: \n")
+        for i in listHmd:
+            file.write(i+'\n')
+        file.write("Presion: \n")
+        for i in listPr:
+            file.write(i+'\n')
+        file.write("Temperatura: \n")
+        for i in listTemp:
+            file.write(i+'\n')
+        
+        file.close()
                                             
         
 

@@ -37,6 +37,9 @@ class Control:
                 h=self.modelo.get_valor_medio(self.modelo.get_humedad())
                 self.vista.mostrar_valor_medio(h,"humedad")
                 opcion="0"
+            elif opcion =="10":
+                self.modelo.escribir(self.modelo.get_humedades(),self.modelo.get_presiones(),self.modelo.get_temperaturas())
+                opcion="0"
             elif opcion == "s":
                print("¡Hasta luego!")
                break

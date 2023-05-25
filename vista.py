@@ -18,6 +18,7 @@ class Vista:
         print("7. Valor medio de la temperatura")
         print("8. Valor medio de la presión")
         print("9. Valor medio de la humedad")
+        print("10. Guardar datos en archivos")
         print("s. Salir")
         return input("Ingrese la opción deseada: ")
     
