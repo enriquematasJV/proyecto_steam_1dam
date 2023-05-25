@@ -73,6 +73,3 @@ class Vista:
 
         # mostrar el gráfico
         plt.show()
-        
-   
-            

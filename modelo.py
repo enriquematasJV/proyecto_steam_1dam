@@ -45,10 +45,6 @@ class Mediciones:
         return valor_min   
                                             
         
-    def leer_fichero("./Datos.txt"):
-        f = open(fichero)
+    def leer_fichero():
+        f = open("./Datos.txt")
         return f
-
-                
-        
-        
