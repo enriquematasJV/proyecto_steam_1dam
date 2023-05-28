@@ -36,19 +36,22 @@ class Mediciones:
     def get_presiones(self):
         return self.presiones
 
-    
+   
     def get_valor_medio(self,lista):
-       pass
+        pass
     
     def get_valor_max(self,lista):
-       pass
+        valor_max = max(lista)
+        return valor_max
+            
     
     def get_valor_min(self,lista):
-       pass    
+        valor_min = min(lista)
+        return valor_min   
                                             
         
-
-
-                
+    def leer_fichero():
+        f = open("./Datos.txt")
+        return f                        
         
-        
+
