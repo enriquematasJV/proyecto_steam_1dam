@@ -40,6 +40,10 @@ class Control:
             elif opcion == "6":
                self.vista.mostrar_grafico_humedad(self.modelo.get_humedad())
                opcion="0" 
+
+            elif opcion == "5":
+               self.vista.mostrar_grafico_presion(self.modelo.get_presiones())
+               opcion="0"
            
             elif opcion == "s":
                print("¡Hasta luego!")
