@@ -22,6 +22,12 @@ class Control:
                t=self.modelo.get_temperatura()
                self.vista.mostrar_temperatura(t)
                opcion="0"
+               
+            elif opcion == "3":
+                h=self.modelo.get_humedad()
+                self.vista.mostrar_humedad(h)
+                opcion="0"
+            
             elif opcion == "4":
                self.vista.mostrar_grafico_temperatura(self.modelo.get_temperaturas())
                opcion="0" 
