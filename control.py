@@ -9,7 +9,7 @@ class Control:
         
         self.vista=Vista()
         self.modelo=Mediciones()
-        
+     
    
     def inicio(self):
         
@@ -19,6 +19,7 @@ class Control:
     
             if opcion == "0":
                opcion=self.vista.menu()
+          
             elif opcion == "1":
                t=self.modelo.get_temperatura()
                self.vista.mostrar_temperatura(t)
@@ -45,7 +46,22 @@ class Control:
             elif opcion == "5":
                self.vista.mostrar_grafico_presion(self.modelo.get_presiones())
                opcion="0"
-              
+            
+            elif opcion =="7":
+                t=self.modelo.get_valor_medio(self.modelo.get_temperaturas())
+                self.vista.mostrar_valor_medio(t,"temperatura")
+                opcion="0"
+            
+            elif opcion =="8":
+                p=self.modelo.get_valor_medio(self.modelo.get_presion())
+                self.vista.mostrar_valor_medio(p,"presion")
+                opcion="0"
+            
+            elif opcion =="9":
+                h=self.modelo.get_valor_medio(self.modelo.get_humedad())
+                self.vista.mostrar_valor_medio(h,"humedad")
+                opcion="0"   
+            
             elif opcion == "10":
                m = self.modelo.get_valor_max(self.modelo.get_temperaturas())
                self.vista.mostrar_valor_max(m,"temperatura")
@@ -58,12 +74,12 @@ class Control:
                m = self.modelo.get_valor_max(self.modelo.get_humedades())
                self.vista.mostrar_valor_max(m,"humedad")
            
-            
             elif opcion == "13":
                 m = self.modelo.get_valor_min(self.modelo.get_temperaturas())
                 self.vista.mostrar_valor_min(m,"temperatura")
                 opcion="0"
-            elif opcion == "14":
+           
+          elif opcion == "14":
                 m = self.modelo.get_valor_min(self.modelo.get_presiones())
                 self.vista.mostrar_valor_min(m,"presion")
                
@@ -75,11 +91,12 @@ class Control:
                 m = self.modelo.leer_fichero()
                 self.vista.leer_fichero() 
            
+            elif opcion =="17":
+                self.modelo.escribir(self.modelo.get_humedades(),self.modelo.get_presiones(),self.modelo.get_temperaturas())
+                opcion="0"
+                
             elif opcion == "s":
                print("¡Hasta luego!")
                break
             else:
                opcion=self.vista.menu
-
-        
-

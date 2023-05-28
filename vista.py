@@ -1,3 +1,4 @@
+
 from sense_emu import SenseHat
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -25,6 +26,7 @@ class Vista:
         print("14. Valor minimo presion")
         print("15. Valor minimo humedad")
         print("16. Leer fichero")
+        print("17. Escribir fichero")
         print("s. Salir")
         return input("Ingrese la opción deseada: ")
     
@@ -58,9 +60,15 @@ class Vista:
             self.sense.show_message("{}g/m3".format(m))
         print(m)
           
-       
     def mostrar_valor_medio(self, m, texto):
-       pass
+        if texto=="temperatura" :
+            self.sense.show_message("{}C".format(m))
+        elif texto=="presion" :
+            self.sense.show_message("{}bar".format(m))
+        elif texto=="humedad" :
+            self.sense.show_message("{}g/m3".format(m))
+        print(m)   
+    
     
     def leer_fichero(f):
         print(f.readline())
@@ -110,4 +118,3 @@ class Vista:
         plt.show()
         
    
-

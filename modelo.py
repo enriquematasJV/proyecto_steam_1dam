@@ -36,9 +36,17 @@ class Mediciones:
     def get_presiones(self):
         return self.presiones
 
-   
     def get_valor_medio(self,lista):
-        pass
+        suma=0
+        cont=0
+        for i in lista :
+            suma=i+suma
+            cont=cont+1
+        
+        result=suma/cont
+        result=round(result,2)
+        return result
+  
     
     def get_valor_max(self,lista):
         valor_max = max(lista)
@@ -55,3 +63,16 @@ class Mediciones:
         return f                        
         
 
+    def escribir(self,listHmd,listPr,listTemp):
+       file= open('Datos.txt','a')
+       file.write("Humedad: \n")
+       for i in listHmd:
+           file.write(i+'\n')
+       file.write("Presion: \n")
+       for i in listPr:
+           file.write(i+'\n')
+       file.write("Temperatura: \n")
+       for i in listTemp:
+           file.write(i+'\n')
+       
+       file.close()
