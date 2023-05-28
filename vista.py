@@ -25,9 +25,15 @@ class Vista:
         self.sense.show_message("{}C".format(t))
         print(t)
 
+
     def mostrar_presion(self,p):
         self.sense.show_message("{}Mbar".format(p))
         print(p)
+          
+    def mostrar_humedad(self,h):
+        self.sense.show_message("{}%".format(h))
+        print(h)
+
     
     def mostrar_valor_medio(self, m, texto):
        pass
