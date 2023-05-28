@@ -1,5 +1,5 @@
 from sense_emu import SenseHat
-#import pandas as pd
+import pandas as pd
 import matplotlib.pyplot as plt
 
 class Vista:
@@ -32,6 +32,14 @@ class Vista:
         self.sense.show_message("{}C".format(t))
         print(t)
         
+    def mostrar_presion(self,p):
+        self.sense.show_message("{}Mbar".format(p))
+        print(p)
+          
+    def mostrar_humedad(self,h):
+        self.sense.show_message("{}%".format(h))
+        print(h)
+        
     def mostrar_valor_max(self,m,textito):
         if textito=="temperatura" :
             self.sense.show_message("{}C".format(m))
@@ -50,15 +58,14 @@ class Vista:
             self.sense.show_message("{}g/m3".format(m))
         print(m)
           
-   
-    
+       
     def mostrar_valor_medio(self, m, texto):
        pass
     
     def leer_fichero(f):
         print(f.readline())
-        
-    
+      
+ 
     
     def mostrar_grafico_temperatura (self, temperaturas):
         df_temperatura = pd.DataFrame({'Temperatura': temperaturas})
@@ -73,3 +80,34 @@ class Vista:
 
         # mostrar el gráfico
         plt.show()
+
+     def mostrar_grafico_presion (self, presiones):
+        df_presion = pd.DataFrame({'Presión': presiones})
+
+        # crear un gráfico de línea
+        df_presion.plot(kind='line')
+
+        # personalizar el gráfico con títulos y etiquetas de los ejes
+        plt.title('Presión')
+        plt.xlabel('Tiempo (minutos)')
+        plt.ylabel('Presión (mbar)')
+
+        # mostrar el gráfico
+        plt.show()
+        
+    def mostrar_grafico_humedad (self, humedades):
+        df_humedad = pd.DataFrame({'Humedad': humedades})
+
+        # crear un gráfico de línea
+        df_humedad.plot(kind='line')
+
+        # personalizar el gráfico con títulos y etiquetas de los ejes
+        plt.title('Humedad')
+        plt.xlabel('Tiempo (minutos)')
+        plt.ylabel('Humedad (%)')
+
+        # mostrar el gráfico
+        plt.show()
+        
+   
+
