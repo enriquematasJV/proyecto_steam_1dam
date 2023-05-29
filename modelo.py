@@ -11,6 +11,10 @@ class Mediciones:
        
         self.humedades=[]
 
+        self.red = (255, 0, 0)
+        
+        self.blue = (0, 0, 255)
+
        
     def get_humedad(self):
        h=round(self.sense.humidity,2)
