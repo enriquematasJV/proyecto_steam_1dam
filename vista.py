@@ -27,6 +27,7 @@ class Vista:
         print("15. Valor minimo humedad")
         print("16. Leer fichero")
         print("17. Escribir fichero")
+        print("18. Escribir fichero")
         print("s. Salir")
         return input("Ingrese la opción deseada: ")
     

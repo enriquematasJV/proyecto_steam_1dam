@@ -79,7 +79,7 @@ class Control:
                 self.vista.mostrar_valor_min(m,"temperatura")
                 opcion="0"
            
-          elif opcion == "14":
+            elif opcion == "14":
                 m = self.modelo.get_valor_min(self.modelo.get_presiones())
                 self.vista.mostrar_valor_min(m,"presion")
                
@@ -93,6 +93,10 @@ class Control:
            
             elif opcion =="17":
                 self.modelo.escribir(self.modelo.get_humedades(),self.modelo.get_presiones(),self.modelo.get_temperaturas())
+                opcion="0"
+
+            elif opcion =="18":
+                self.modelo.medir_temperatura_constante()
                 opcion="0"
                 
             elif opcion == "s":

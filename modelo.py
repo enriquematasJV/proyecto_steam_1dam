@@ -17,7 +17,7 @@ class Mediciones:
        self.humedades.append(h)
        return h
       
-     def get_presion(self):
+    def get_presion(self):
         p = round(self.sense.get_pressure(),0)
         self.presiones.append(p)
         return p
@@ -76,3 +76,10 @@ class Mediciones:
            file.write(i+'\n')
        
        file.close()
+
+    def medir_temperatura_constante(self):
+        while True:
+            temp = self.sense.temp
+            print(temp)
+            pixels = [self.red if i < temp else self.blue for i in range(64)]
+            self.sense.set_pixels(pixels)
